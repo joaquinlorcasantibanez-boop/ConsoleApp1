@@ -3,11 +3,11 @@ using System.Data;
 
 namespace TuProyecto
 {
-    public class Pantalla
+    public class Ver_Info_Trabajador
     {
-        public void BuscarTrabajador()
+        public static void BuscarTrabajador()
         {
-            Console.Write("Ingrese el ID del trabajador: ");
+            Console.Write("Ingrese el registro del trabajador: ");
 
             int idTrabajador = int.Parse(Console.ReadLine());
 
@@ -28,7 +28,7 @@ namespace TuProyecto
 
                 if (dr.Read())
                 {
-                    Console.WriteLine("\n=== DATOS DEL TRABAJADOR ===");
+                    Console.WriteLine("\n DATOS DEL TRABAJADOR");
 
                     Console.WriteLine(
                         $"Nombre: {dr["Nombre"]}");

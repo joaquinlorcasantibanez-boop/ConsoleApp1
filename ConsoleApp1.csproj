@@ -10,7 +10,15 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Presentacion_Forms\**" />
+	  <EmbeddedResource Remove="Presentacion_Forms\**" />
+	  <None Remove="Presentacion_Forms\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.0" />
+		<PackageReference Include="PDFsharp" Version="6.2.4" />
+		<PackageReference Include="QuestPDF" Version="2026.9.1" />
 	</ItemGroup>
 
 </Project>
