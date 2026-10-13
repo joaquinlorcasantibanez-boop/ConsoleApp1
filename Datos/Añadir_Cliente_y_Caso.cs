@@ -1,9 +1,10 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using ConsoleApp1.Negocio;
+using Microsoft.Data.SqlClient;
 using System.Data;
 
 namespace TuProyecto
 {
-    public class Clientes
+    public class Añadir_Cliente_y_Caso
     {
         public static void InsertarClienteYCaso()
         {
@@ -65,6 +66,12 @@ namespace TuProyecto
 
                     Console.WriteLine(
                         "Caso registrado correctamente.");
+                    GeneradorPDF.PDFClienteCaso(
+                      idCliente,
+                      nombre,
+                      celular,
+                      correo,
+                      descripcion);
                 }
             }
             catch (SqlException ex)
